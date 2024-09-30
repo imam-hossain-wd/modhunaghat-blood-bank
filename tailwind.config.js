@@ -9,6 +9,10 @@ module.exports = {
   theme: {
   	extend: {
   		colors: {
+			danger: {
+				DEFAULT: '#DC143C', // Use the hash code you provided
+				foreground: 'hsl(var(--primary-foreground))' // Keep the existing hsl setting
+			  },
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
