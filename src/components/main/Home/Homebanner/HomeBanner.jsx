@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { homebanner } from "@/utils/assets";
 import Image from "next/image";
+import Link from "next/link";
 
 const HomeBanner = () => {
   const { banner } = homebanner;
@@ -16,21 +17,13 @@ const HomeBanner = () => {
             Join our mission to help those in need. Your donation can save
             lives!
           </p>
-          {/* <b className="mt-6 px-6 py-3 bg-[#DC143C] text-white rounded-md hover:bg-red-600 transition">
-            Join as a Donor
-          </b>
-          <button className="mt-6 px-6 py-3 bg-[#DC143C] text-white rounded-md hover:bg-red-600 transition">
-            Find Donor
-          </button> */}
 
-         <div className="flex  mt-5 items-center">
-         <Button className="text-xl font-bold">
-          Join as a Donor
-          </Button>
-          <Button className="text-xl ml-5 font-bold">
-          Find Donor
-          </Button>
-         </div>
+          <div className="flex ml-10 lg:ml-0 mt-5 items-center">
+            <Button className="text-xl font-bold">
+              <Link href="/donor/register">Join as a Donor</Link>
+            </Button>
+            <Button className="text-xl ml-5 font-bold">Find Donor</Button>
+          </div>
         </div>
         <Image
           src={banner}
